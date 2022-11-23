@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+	class="no-js">
+<head>
+<meta charset="UTF-8">
+<title>아이디 찾기</title>
+</head>
+<body>
+	
+	<div>
+		<div style="text-align: center;">
+			<form action="/closet/findId/findId.do" method="post">
+				<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+				<div>
+					<h3>아이디 찾기</h3>
+				</div>
+				<div>
+					<p>
+						<label>Email</label>
+						<input type="text" id="email" name="email" required>
+					</p>
+					<p style="text-align: center;">
+						<button type="submit">find</button>
+						<button type="button">Cancel</button>
+					</p>
+				</div>
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+	class="no-js">
+<head>
+<meta charset="UTF-8">
+<title>아이디 찾기</title>
+</head>
+<body>
+	<div style="text-align: center;">
+		<div>
+			<h3>아이디 찾기 검색결과</h3>
+		</div>
+		<div>
+			가입하신 아이디는<br>
+			<span id="title" style="font-size: 13pt" th:text="${ id }"></span>
+			입니다.
+			<p>
+				<button type="button" onclick="location.href='/closet/login'">로그인</button>
+				<button type="button" onclick="location.href='/closet'">메인으로</button>
+				<button type="button" onclick="history.go(-1);">뒤로가기</button>
+			</p>
+		</div>
+	</div>
+</body>
+</html>
